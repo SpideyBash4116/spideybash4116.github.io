@@ -1,89 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Atlas Reign - Alpha 0.2.1</title>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Atlas Reign - Alpha 0.3.2</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <h1>Atlas Reign – Alpha</h1>
-
 <div class="container">
 
-    <!-- Stats Panel -->
-    <div class="panel" id="stats-panel">
-        <h2>Nation Stats</h2>
-
-        <div class="stat">
-            <label>Population:</label>
-            <span id="population">0</span>
-        </div>
-
-        <div class="statbar">
-            <label>Economy</label>
-            <div class="bar-bg">
-                <div class="bar-fill" id="economy-bar"></div>
-                <span class="tooltip-text" id="economy-tip">80</span>
-            </div>
-        </div>
-
-        <div class="statbar">
-            <label>Happiness</label>
-            <div class="bar-bg">
-                <div class="bar-fill" id="happiness-bar"></div>
-                <span class="tooltip-text" id="happiness-tip">80</span>
-            </div>
-        </div>
-
-        <div class="statbar">
-            <label>Military</label>
-            <div class="bar-bg">
-                <div class="bar-fill" id="military-bar"></div>
-                <span class="tooltip-text" id="military-tip">40</span>
-            </div>
-        </div>
-
-        <div class="statbar">
-            <label>Environment</label>
-            <div class="bar-bg">
-                <div class="bar-fill" id="environment-bar"></div>
-                <!-- Missing tooltip fixed -->
-                <span class="tooltip-text" id="environment-tip">60</span>
-            </div>
-        </div>
-
-        <button id="nextTurn">Next Turn</button>
+<!-- Stats Panel -->
+<div class="panel" id="stats-panel">
+    <h2>Nation Stats</h2>
+    <div class="stat"><label>Population:</label> <span id="population">0</span></div>
+    <div class="statbar"><label>Economy</label>
+        <div class="bar-bg"><div class="bar-fill" id="economy-bar"></div><span class="tooltip-text" id="economy-tip">0</span></div>
     </div>
-
-    <!-- Laws Panel -->
-    <div class="panel" id="laws-panel">
-        <h2>Laws</h2>
-
-        <button onclick="enactLaw('environment')">Environmental Protection Act</button>
-        <button onclick="enactLaw('economy')">Tax Incentive Program</button>
-        <button onclick="enactLaw('military')">Mandatory Military Service</button>
-        <button onclick="startFestival('cultural')">Cultural Festival</button>
-        <button onclick="startFestival('music')">Music Festival</button>
-        <button onclick="startFestival('eco')">Eco-Festival</button>
-
-        <h3>Active Laws</h3>
-        <ul id="active-laws"></ul>
+    <div class="statbar"><label>Happiness</label>
+        <div class="bar-bg"><div class="bar-fill" id="happiness-bar"></div><span class="tooltip-text" id="happiness-tip">0</span></div>
     </div>
-
-    <!-- News Panel -->
-    <div class="panel" id="news-panel">
-        <h2>National News</h2>
-        <div id="news"></div>
+    <div class="statbar"><label>Military</label>
+        <div class="bar-bg"><div class="bar-fill" id="military-bar"></div><span class="tooltip-text" id="military-tip">0</span></div>
     </div>
-
-    <!-- Map Panel -->
-    <div class="panel">
-        <h2>Country Map</h2>
-        <canvas id="map" width="300" height="300"></canvas>
+    <div class="statbar"><label>Environment</label>
+        <div class="bar-bg"><div class="bar-fill" id="environment-bar"></div><span class="tooltip-text" id="environment-tip">0</span></div>
     </div>
+    <button id="nextTurn">Next Turn</button>
+</div>
 
+<!-- Laws Panel -->
+<div class="panel" id="laws-panel">
+    <h2>Laws</h2>
+    <button onclick="enactLaw('environment')">Environmental Protection Act</button>
+    <button onclick="enactLaw('economy')">Tax Incentive Program</button>
+    <button onclick="enactLaw('military')">Mandatory Military Service</button>
+    <button onclick="startFestival('cultural')">Cultural Festival</button>
+    <button onclick="startFestival('music')">Music Festival</button>
+    <button onclick="startFestival('eco')">Eco-Festival</button>
+    <h3>Active Laws</h3>
+    <ul id="active-laws"></ul>
+</div>
+
+<!-- News Panel -->
+<div class="panel" id="news-panel">
+    <h2>National News</h2>
+    <div id="news"></div>
+</div>
+
+<!-- Map Panel -->
+<div class="panel">
+    <h2>Country Map</h2>
+    <canvas id="map" width="300" height="300"></canvas>
 </div>
 
 <script src="script.js"></script>
