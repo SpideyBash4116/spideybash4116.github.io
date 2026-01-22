@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef0f2;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.panel {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.stat {
+    margin-bottom: 10px;
+}
+
+.statbar {
+    margin-bottom: 15px;
+}
+
+.bar-bg {
+    width: 100%;
+    background: #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 50%;
+    background: #4CAF50;
+    transition: width 0.3s;
+}
+
+#news {
+    height: 200px;
+    overflow-y: auto;
+    background: #f6f6f6;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#active-laws {
+    height: 130px;
+    overflow-y: auto;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* On collapse */
+body.collapse {
+    background: #3a0000;
+    color: #ffcccc;
+}
+
+/* New icons */
+.bar-fill.low { background: #e74c3c; }
+.bar-fill.mid { background: #f1c40f; }
+.bar-fill.high { background: #2ecc71; }
+
+/* Winter theme */
+body.winter {
+    background: linear-gradient(#cfe9ff, #ffffff);
+    color: #1a2b44
+}
+.winter h1::after {
+    content: " ❄️🎄"
+}
